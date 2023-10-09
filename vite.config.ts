@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from "node:url";
 import { resolve } from 'path';
 import dts from 'vite-plugin-dts';
+import pkg from './package.json' assert { type: 'json' }
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -27,6 +28,7 @@ export default defineConfig({
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
+      ...Object.keys(pkg.dependencies),
       external: ["vue"],
       output: {
         // Provide global variables to use in the UMD build

@@ -41,7 +41,7 @@
     "sass": "^1.69.0",
     "storybook": "^7.4.6",
     "typescript": "^5.0.2",
-    "ui-searchbooster": "^0.0.4",
+    "ui-searchbooster": "^0.0.5",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.6.0",
     "vitest": "^0.34.6",
