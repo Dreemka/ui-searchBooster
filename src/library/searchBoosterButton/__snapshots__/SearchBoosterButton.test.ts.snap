@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchBoosterButton > Snapshot 1`] = `
+"<button class=\\"searchbooster-btn searchbooster-btn-primary searchbooster-btn-medium searchbooster-btn-contained\\" title=\\"\\">
+  <!-- <searchbooster-icon
+      v-if=\\"prependIcon\\"
+      class=\\"searchbooster-btn-icon searchbooster-btn-prepend-icon\\"
+      :icon=\\"prependIcon\\"
+    /> --><span class=\\"searchbooster-btn-text-in-button\\"><span></span></span>
+  <!-- <searchbooster-icon class=\\"searchbooster-btn-icon\\" v-if=\\"props.icon\\" :icon=\\"icon\\" />
+    <searchbooster-icon
+      v-if=\\"appendIcon\\"
+      class=\\"searchbooster-btn-icon searchbooster-btn-append-icon\\"
+      :icon=\\"appendIcon\\"
+    /> -->
+</button>"
+`;
+
+exports[`SearchBoosterButton > renders button text correctly 1`] = `
+"<button class=\\"searchbooster-btn searchbooster-btn-primary searchbooster-btn-medium searchbooster-btn-contained\\" title=\\"\\">
+  <!-- <searchbooster-icon
+      v-if=\\"prependIcon\\"
+      class=\\"searchbooster-btn-icon searchbooster-btn-prepend-icon\\"
+      :icon=\\"prependIcon\\"
+    /> --><span class=\\"searchbooster-btn-text-in-button\\"><span></span></span>
+  <!-- <searchbooster-icon class=\\"searchbooster-btn-icon\\" v-if=\\"props.icon\\" :icon=\\"icon\\" />
+    <searchbooster-icon
+      v-if=\\"appendIcon\\"
+      class=\\"searchbooster-btn-icon searchbooster-btn-append-icon\\"
+      :icon=\\"appendIcon\\"
+    /> -->
+</button>"
+`;
