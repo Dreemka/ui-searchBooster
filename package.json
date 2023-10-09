@@ -12,7 +12,7 @@
       "require": "./dist/ui-searchbooster.umd.js"
     }
   },
-  "types": "./dist/types/library/index.d.ts",
+  "types": "./dist/library/index.d.ts",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -41,7 +41,7 @@
     "sass": "^1.69.0",
     "storybook": "^7.4.6",
     "typescript": "^5.0.2",
-    "ui-searchbooster": "^0.0.2",
+    "ui-searchbooster": "^0.0.4",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.6.0",
     "vitest": "^0.34.6",
