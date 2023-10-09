@@ -1,20 +1,47 @@
 {
   "name": "ui-searchbooster",
-  "private": true,
-  "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "version": "0.0.2",
+  "main": "./dist/ui-searchbooster.umd.js",
+  "module": "./dist/ui-searchbooster.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-searchbooster.es.js",
+      "require": "./dist/ui-searchbooster.umd.js"
+    }
+  },
+  "types": "./dist/types/library/index.d.ts",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6007",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^7.4.6",
+    "@storybook/addon-essentials": "^7.4.6",
+    "@storybook/addon-interactions": "^7.4.6",
+    "@storybook/addon-links": "^7.4.6",
+    "@storybook/addon-mdx-gfm": "^7.4.6",
+    "@storybook/testing-library": "^0.2.2",
+    "@storybook/vue3": "^7.4.6",
+    "@storybook/vue3-vite": "^7.4.6",
     "@vitejs/plugin-vue": "^4.2.3",
+    "eslint-plugin-storybook": "^0.6.15",
+    "sass": "^1.69.0",
+    "storybook": "^7.4.6",
     "typescript": "^5.0.2",
+    "ui-searchbooster": "^0.0.2",
     "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.6.0",
+    "vitest": "^0.34.6",
     "vue-tsc": "^1.8.5"
   }
 }

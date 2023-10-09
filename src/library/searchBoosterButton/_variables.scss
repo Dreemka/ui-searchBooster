@@ -1,0 +1,185 @@
+$enable-button-pointers: true !default;
+
+$btn-base-height: $medium-height !default;
+$btn-base-font-size: $typography-size-body-standart !default;
+$btn-base-icon-size: $typography-size-h6 !default;
+
+$btn-base-font-weight: $typography-weight-500 !default;
+$btn-base-line-height: $typography-line-height-18 !default;
+$btn-base-white-space: nowrap !default;
+$btn-base-color: $white !default;
+$btn-base-border: 0 !default;
+$btn-base-border-radius: 4px !default;
+$btn-base-background-color: $grey-700 !default;
+
+$btn-base-padding-x-large: 14px !default;
+$btn-base-padding-large: 12px !default;
+$btn-base-padding-medium: 10px !default;
+$btn-base-padding-small: 6px !default;
+$btn-base-padding-x-small: 4px !default;
+
+$btn-base-icon-size-x-large: $typography-size-h4 !default;
+$btn-base-icon-size-large: $typography-size-h5 !default;
+$btn-base-icon-size-medium: $typography-size-h6 !default;
+$btn-base-icon-size-small: $typography-size-h6 !default;
+
+//disabled
+$btn-contained-disabled-color: $grey-400 !default;
+$btn-contained-disabled-bg-color: $grey-200 !default;
+
+$btn-outlined-disabled-color: $grey-300 !default;
+$btn-outlined-disabled-border: 1px solid $grey-300 !default;
+$btn-outlined-disabled-bg-color: transparent !default;
+
+$btn-ghost-disabled-color: $grey-400 !default;
+$btn-ghost-disabled-border: 0 !default;
+$btn-ghost-disabled-bg-color: transparent !default;
+//
+
+//sizes
+$btn-x-small-height: 18px !default;
+$btn-small-height: $small-height !default;
+$btn-medium-height: $btn-base-height !default;
+$btn-large-height: $large-height !default;
+$btn-x-large-height: $x-large-height !default;
+//
+
+$btn-contained-primary-bg-color: $purple-600 !default;
+$btn-contained-primary-color: $white !default;
+$btn-contained-primary-hover-bg-color: $purple-700 !default;
+$btn-contained-primary-active-bg-color: $purple-800 !default;
+
+$btn-contained-blue-bg-color: $blue-500 !default;
+$btn-contained-blue-color: $white !default;;
+$btn-contained-blue-hover-bg-color: $blue-700 !default;
+$btn-contained-blue-active-bg-color: $blue-800 !default;
+
+$btn-contained-green-bg-color: $green-400 !default;
+$btn-contained-green-color: $white !default;
+$btn-contained-green-hover-bg-color: $green-700 !default;
+$btn-contained-green-active-bg-color: $green-800 !default;
+
+$btn-contained-yellow-bg-color: $yellow-500 !default;
+$btn-contained-yellow-color: $white !default;
+$btn-contained-yellow-hover-bg-color: $yellow-700 !default;
+$btn-contained-yellow-active-bg-color: $yellow-800 !default;
+
+$btn-contained-red-bg-color: $red-500 !default;
+$btn-contained-red-color: $white !default;
+$btn-contained-red-hover-bg-color: $red-700 !default;
+$btn-contained-red-active-bg-color: $red-800 !default;
+
+$btn-contained-grey-bg-color: $grey-500 !default;
+$btn-contained-grey-color: $white !default;
+$btn-contained-grey-hover-bg-color: $grey-700 !default;
+$btn-contained-grey-active-bg-color: $grey-800 !default;
+
+$btn-outlined-primary-bg-color: transparent !default;
+$btn-outlined-primary-color: $btn-contained-primary-bg-color !default;
+$btn-outlined-primary-border: 1px solid $purple-200 !default;
+$btn-outlined-primary-hover-color: $purple-600 !default;
+$btn-outlined-primary-hover-border: 1px solid $btn-outlined-primary-hover-color !default;
+$btn-outlined-primary-active-color: $btn-outlined-primary-hover-color !default;
+$btn-outlined-primary-active-border: 1px solid $btn-outlined-primary-active-color !default;
+$btn-outlined-primary-active-bg-color: $purple-100 !default;
+
+$btn-outlined-blue-bg-color: transparent !default;
+$btn-outlined-blue-color: $blue-500 !default;
+$btn-outlined-blue-border: 1px solid $blue-200 !default;
+$btn-outlined-blue-hover-color: $blue-500 !default;
+$btn-outlined-blue-hover-border: 1px solid $blue-500 !default;
+$btn-outlined-blue-active-color: $blue-500 !default;
+$btn-outlined-blue-active-border: 1px solid $blue-500 !default;
+$btn-outlined-blue-active-bg-color: $blue-100 !default;
+
+$btn-outlined-green-bg-color: transparent !default;
+$btn-outlined-green-color: $green-400 !default;
+$btn-outlined-green-border: 1px solid $green-200 !default;
+$btn-outlined-green-hover-color: $green-400 !default;
+$btn-outlined-green-hover-border: 1px solid $green-400 !default;
+$btn-outlined-green-active-color: $green-400 !default;
+$btn-outlined-green-active-border: 1px solid $green-400 !default;
+$btn-outlined-green-active-bg-color: $green-50 !default;
+
+$btn-outlined-yellow-bg-color: transparent !default;
+$btn-outlined-yellow-color: $yellow-500 !default;
+$btn-outlined-yellow-border: 1px solid $yellow-300 !default;
+$btn-outlined-yellow-hover-color: $yellow-500 !default;
+$btn-outlined-yellow-hover-border: 1px solid $yellow-500 !default;
+$btn-outlined-yellow-active-color: $yellow-500 !default;
+$btn-outlined-yellow-active-border: 1px solid $yellow-500 !default;
+$btn-outlined-yellow-active-bg-color: $yellow-100 !default;
+
+$btn-outlined-red-bg-color: transparent !default;
+$btn-outlined-red-color: $red-500 !default;
+$btn-outlined-red-border: 1px solid $red-300 !default;
+$btn-outlined-red-hover-color: $red-500 !default;
+$btn-outlined-red-hover-border: 1px solid $red-500 !default;
+$btn-outlined-red-active-color: $red-500 !default;
+$btn-outlined-red-active-border: 1px solid $red-500 !default;
+$btn-outlined-red-active-bg-color: $red-100 !default;
+
+$btn-outlined-grey-bg-color: transparent !default;
+$btn-outlined-grey-color: $grey-500 !default;
+$btn-outlined-grey-border: 1px solid $grey-300 !default;
+$btn-outlined-grey-hover-color: $grey-500 !default;
+$btn-outlined-grey-hover-border: 1px solid $grey-500 !default;
+$btn-outlined-grey-active-color: $grey-500 !default;
+$btn-outlined-grey-active-border: 1px solid $grey-500 !default;
+$btn-outlined-grey-active-bg-color: $grey-100 !default;
+
+$btn-ghost-primary-bg-color: transparent !default;
+$btn-ghost-primary-border: 1px solid transparent !default;
+$btn-ghost-primary-color: $purple-600 !default;
+$btn-ghost-primary-hover-bg-color: $purple-100 !default;
+$btn-ghost-primary-hover-color: $purple-600 !default;
+$btn-ghost-primary-active-bg-color: $purple-100 !default;
+$btn-ghost-primary-active-border: 1px solid $purple-600 !default;
+$btn-ghost-primary-active-color: $purple-600 !default;
+
+$btn-ghost-blue-bg-color: transparent !default;
+$btn-ghost-blue-border: 1px solid transparent !default;
+$btn-ghost-blue-color: $blue-500 !default;
+$btn-ghost-blue-hover-bg-color: $blue-100 !default;
+$btn-ghost-blue-hover-color: $blue-500 !default;
+$btn-ghost-blue-active-bg-color: $blue-100 !default;
+$btn-ghost-blue-active-border: 1px solid $blue-500 !default;
+$btn-ghost-blue-active-color: $blue-500 !default;
+
+$btn-ghost-green-bg-color: transparent !default;
+$btn-ghost-green-border: 1px solid transparent !default;
+$btn-ghost-green-color: $green-400 !default;
+$btn-ghost-green-hover-bg-color: $green-50 !default;
+$btn-ghost-green-hover-color: $green-400 !default;
+$btn-ghost-green-active-bg-color: $green-50 !default;
+$btn-ghost-green-active-border: 1px solid $green-400 !default;
+$btn-ghost-green-active-color: $green-400 !default;
+
+$btn-ghost-yellow-bg-color: transparent !default;
+$btn-ghost-yellow-border: 1px solid transparent !default;
+$btn-ghost-yellow-color: $yellow-500 !default;
+$btn-ghost-yellow-hover-bg-color: $yellow-100 !default;
+$btn-ghost-yellow-hover-color: $yellow-500 !default;
+$btn-ghost-yellow-active-bg-color: $yellow-100 !default;
+$btn-ghost-yellow-active-border: 1px solid $yellow-500 !default;
+$btn-ghost-yellow-active-color: $yellow-500 !default;
+
+$btn-ghost-red-bg-color: transparent !default;
+$btn-ghost-red-border: 1px solid transparent !default;
+$btn-ghost-red-color: $red-500 !default;
+$btn-ghost-red-hover-bg-color: $red-100 !default;
+$btn-ghost-red-hover-color: $red-500 !default;
+$btn-ghost-red-active-bg-color: $red-100 !default;
+$btn-ghost-red-active-border: 1px solid $red-500 !default;
+$btn-ghost-red-active-color: $red-500 !default;
+
+$btn-ghost-grey-bg-color: transparent !default;
+$btn-ghost-grey-border: 1px solid transparent !default;
+$btn-ghost-grey-color: $grey-500 !default;
+$btn-ghost-grey-hover-bg-color: $grey-100 !default;
+$btn-ghost-grey-hover-color: $grey-500 !default;
+$btn-ghost-grey-active-bg-color: $grey-100 !default;
+$btn-ghost-grey-active-border: 1px solid $grey-500 !default;
+$btn-ghost-grey-active-color: $grey-500 !default;
+
+$btn-icon-margin-x: 5px !default;

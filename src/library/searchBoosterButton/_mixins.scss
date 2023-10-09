@@ -1,0 +1,169 @@
+@import "./variables";
+
+@mixin btn-size($size) {
+  @if $size == x-small {
+    min-width: $btn-x-small-height;
+    height: $btn-x-small-height;
+    font-size: $typography-size-body-x-small;
+    padding: $btn-base-padding-x-small;
+  } @else if $size == small {
+    min-width: $btn-small-height;
+    height: $btn-small-height;
+    font-size: $typography-size-body-small;
+    padding: $btn-base-padding-small;
+  } @else if $size == large {
+    min-width: $btn-large-height;
+    height: $btn-large-height;
+    font-size: $typography-size-h6;
+    padding: $btn-base-padding-large;
+  } @else if $size == x-large {
+    min-width: $btn-x-large-height;
+    height: $btn-x-large-height;
+    font-size: $typography-size-h5;
+    padding: $btn-base-padding-x-large;
+  } @else {
+    min-width: $btn-medium-height;
+    height: $btn-medium-height;
+    padding: $btn-base-padding-medium;
+  }
+}
+
+@mixin btn-icon-size($size) {
+  @if $size == x-small {
+    font-size: $typography-size-body-x-small !important;
+  } @else if $size == small {
+    font-size: $typography-size-body-standart !important;
+  } @else if $size == large {
+    font-size: $typography-size-h6 !important;
+  } @else if $size == x-large {
+    font-size: $typography-size-h5 !important;
+  } @else {
+    font-size: $typography-size-body-standart !important;
+  }
+}
+
+@mixin btn-icon-stroke($stroke) {
+  .searchbooster-btn-icon,
+  .searchbooster-btn-prepend-icon,
+  .searchbooster-btn-append-icon {
+    stroke: $stroke;
+  }
+}
+
+@mixin button-contained-color(
+  $background,
+  $color,
+  $hover-background,
+  $active-background,
+  $disabled-color: $btn-contained-disabled-color,
+  $disabled-bg-color: $btn-contained-disabled-bg-color
+) {
+  @include btn-icon-stroke($color);
+
+  background-color: $background;
+  color: $color;
+
+  &:hover {
+    background-color: $hover-background;
+  }
+
+  &:active {
+    background-color: $active-background;
+  }
+
+  &:disabled {
+    @include btn-icon-stroke($disabled-color);
+
+    color: $disabled-color;
+    background-color: $disabled-bg-color;
+  }
+}
+
+@mixin button-outlined-color(
+  $background,
+  $border,
+  $color,
+  $hover-border,
+  $hover-color,
+  $active-border,
+  $active-color,
+  $active-bg,
+  $disabled-color: $btn-outlined-disabled-color,
+  $disabled-bg-color: $btn-outlined-disabled-bg-color,
+  $disabled-border: $btn-outlined-disabled-border
+) {
+  background-color: $background;
+  border: $border;
+  color: $color;
+
+  @include btn-icon-stroke($color);
+
+  &:hover {
+    @include btn-icon-stroke($hover-color);
+
+    border: $hover-border;
+    color: $hover-color;
+  }
+
+  &:active {
+    @include btn-icon-stroke($active-color);
+
+    border: $active-border;
+    color: $active-color;
+    background-color: $active-bg;
+  }
+
+  &:disabled {
+    @include btn-icon-stroke($disabled-color);
+    background-color: $disabled-bg-color;
+    border: $disabled-border;
+    color: $disabled-color;
+  }
+}
+
+@mixin btn-ghost(
+  $background,
+  $border,
+  $color,
+  $hover-background,
+  $hover-color,
+  $active-background,
+  $active-border,
+  $active-color,
+  $disabled-color: $btn-ghost-disabled-color,
+  $disabled-bg-color: $btn-ghost-disabled-bg-color,
+  $disabled-border: $btn-ghost-disabled-border
+) {
+  @include btn-icon-stroke($color);
+
+  background-color: $background;
+  border: $border;
+  color: $color;
+
+  &:hover {
+    @include btn-icon-stroke($hover-color);
+
+    background-color: $hover-background;
+    color: $hover-color;
+  }
+
+  &:active {
+    @include btn-icon-stroke($active-color);
+
+    background-color: $active-background;
+    border: $active-border;
+    color: $active-color;
+  }
+
+  &:disabled {
+    @include btn-icon-stroke($disabled-color);
+
+    background-color: $disabled-bg-color;
+    border: $disabled-border;
+    color: $disabled-color;
+  }
+}
+
+@mixin btn-rounded {
+  border-radius: 28px;
+}

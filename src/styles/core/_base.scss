@@ -1,0 +1,14 @@
+@import "../variables/main";
+
+body {
+  // font-family: $typography-base-fonts-family;
+  font-size: $typography-size-body-standart;
+  font-weight: $typography-weight-400;
+  line-height: $typography-line-height-18;
+  color: $typography-color-base;
+}
+
+// animation
+.contrust-base-animation-expand {
+  transition: height 100ms ease-in-out, opacity 100ms ease-in-out;
+}

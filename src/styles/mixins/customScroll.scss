@@ -1,0 +1,40 @@
+@import "../variables/main";
+
+$baseScrollWidth: 4px !default;
+$baseScrollKeyWordWidth: thin !default;
+$baseScrollThumbBgColor: $grey-300 !default;
+$baseScrollThumbBgColorActive: $grey-400 !default;
+$baseScrollRadius: 8px !default;
+
+@mixin customScroll(
+  $width: $baseScrollWidth,
+  $keyWordWidth: $baseScrollKeyWordWidth,
+  $thumbBgColor: $baseScrollThumbBgColor,
+  $thumbBgColorActive: $baseScrollThumbBgColorActive,
+  $borderRadius: $baseScrollRadius,
+  $vertical: true
+) {
+  scrollbar-color: $thumbBgColor transparent;
+  scrollbar-width: $keyWordWidth;
+
+  &::-webkit-scrollbar {
+    @if ($vertical) {
+      width: $width;
+    } @else {
+      height: $width;
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: $borderRadius;
+    background-color: $thumbBgColor;
+
+    &:active {
+      background-color: $thumbBgColorActive;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}

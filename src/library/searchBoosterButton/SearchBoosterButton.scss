@@ -1,0 +1,283 @@
+@import "@/styles/variables/main";
+@import "variables";
+@import "mixins";
+
+.searchbooster-btn {
+  @include btn-icon-stroke($white);
+
+  // статичные неизменяемые стили
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  user-select: none;
+
+  // динамичные стили
+  border: $btn-base-border;
+  border-radius: $btn-base-border-radius;
+  background-color: $btn-base-background-color;
+  cursor: if($enable-button-pointers, pointer, null);
+  font-size: $btn-base-font-size;
+  font-weight: $btn-base-font-weight;
+  line-height: $btn-base-line-height;
+  color: $btn-base-color;
+  white-space: $btn-base-white-space;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  // иконку центрируем, используя `position: absolute`, потому что у кнопок есть паддинги
+  // и при разных размерах кнопки, ширина иконку будет нарушать симметрию
+
+  .searchbooster-btn-prepend-icon {
+    margin-right: $btn-icon-margin-x;
+  }
+
+  .searchbooster-btn-append-icon {
+    margin-left: $btn-icon-margin-x;
+  }
+}
+
+// формируем стили размеров
+$sizes: x-small, small, medium, large, x-large;
+
+@each $size in $sizes {
+  .searchbooster-btn-#{$size} {
+    @include btn-size($size);
+
+    .searchbooster-btn-icon {
+      @include btn-icon-size($size);
+    }
+  }
+}
+
+// формируем стили вариантов кнопки
+.searchbooster-btn-contained {
+  &.searchbooster-btn-primary {
+    @include button-contained-color(
+      $btn-contained-primary-bg-color,
+      $btn-contained-primary-color,
+      $btn-contained-primary-hover-bg-color,
+      $btn-contained-primary-active-bg-color,      
+    );
+  }
+
+  &.searchbooster-btn-blue {
+    @include button-contained-color(
+      $btn-contained-blue-bg-color,
+      $btn-contained-blue-color,
+      $btn-contained-blue-hover-bg-color,
+      $btn-contained-blue-active-bg-color,
+    );
+  }
+
+  &.searchbooster-btn-green {
+    @include button-contained-color(
+      $btn-contained-green-bg-color,
+      $btn-contained-green-color,
+      $btn-contained-green-hover-bg-color,
+      $btn-contained-green-active-bg-color,
+    );
+  }
+
+  &.searchbooster-btn-yellow {
+    @include button-contained-color(
+      $btn-contained-yellow-bg-color,
+      $btn-contained-yellow-color,
+      $btn-contained-yellow-hover-bg-color,
+      $btn-contained-yellow-active-bg-color,
+    );
+  }
+
+  &.searchbooster-btn-red {
+    @include button-contained-color(
+      $btn-contained-red-bg-color,
+      $btn-contained-red-color,
+      $btn-contained-red-hover-bg-color,
+      $btn-contained-red-active-bg-color,
+    );
+  }
+
+  &.searchbooster-btn-grey {
+    @include button-contained-color(
+      $btn-contained-grey-bg-color,
+      $btn-contained-grey-color,
+      $btn-contained-grey-hover-bg-color,
+      $btn-contained-grey-active-bg-color,
+    );
+  }
+}
+
+.searchbooster-btn-outlined {
+  &.searchbooster-btn-primary {
+    @include button-outlined-color(
+      $btn-outlined-primary-bg-color,
+      $btn-outlined-primary-border,
+      $btn-outlined-primary-color,
+      $btn-outlined-primary-hover-border,
+      $btn-outlined-primary-hover-color,
+      $btn-outlined-primary-active-border,
+      $btn-outlined-primary-active-color,
+      $btn-outlined-primary-active-bg-color
+    );
+  }
+
+  &.searchbooster-btn-blue {
+    @include button-outlined-color(
+      $btn-outlined-blue-bg-color,
+      $btn-outlined-blue-border,
+      $btn-outlined-blue-color,
+      $btn-outlined-blue-hover-border,
+      $btn-outlined-blue-hover-color,
+      $btn-outlined-blue-active-border,
+      $btn-outlined-blue-active-color,
+      $btn-outlined-blue-active-bg-color
+    );
+  }
+
+  &.searchbooster-btn-green {
+    @include button-outlined-color(
+      $btn-outlined-green-bg-color,
+      $btn-outlined-green-border,
+      $btn-outlined-green-color,
+      $btn-outlined-green-hover-border,
+      $btn-outlined-green-hover-color,
+      $btn-outlined-green-active-border,
+      $btn-outlined-green-active-color,
+      $btn-outlined-green-active-bg-color
+    );
+  }
+
+  &.searchbooster-btn-yellow {
+    @include button-outlined-color(
+      $btn-outlined-yellow-bg-color,
+      $btn-outlined-yellow-border,
+      $btn-outlined-yellow-color,
+      $btn-outlined-yellow-hover-border,
+      $btn-outlined-yellow-hover-color,
+      $btn-outlined-yellow-active-border,
+      $btn-outlined-yellow-active-color,
+      $btn-outlined-yellow-active-bg-color
+    );
+  }
+
+  &.searchbooster-btn-red {
+    @include button-outlined-color(
+      $btn-outlined-red-bg-color,
+      $btn-outlined-red-border,
+      $btn-outlined-red-color,
+      $btn-outlined-red-hover-border,
+      $btn-outlined-red-hover-color,
+      $btn-outlined-red-active-border,
+      $btn-outlined-red-active-color,
+      $btn-outlined-red-active-bg-color
+    );
+  }
+
+  &.searchbooster-btn-grey {
+    @include button-outlined-color(
+      $btn-outlined-grey-bg-color,
+      $btn-outlined-grey-border,
+      $btn-outlined-grey-color,
+      $btn-outlined-grey-hover-border,
+      $btn-outlined-grey-hover-color,
+      $btn-outlined-grey-active-border,
+      $btn-outlined-grey-active-color,
+      $btn-outlined-grey-active-bg-color
+    );
+  }
+}
+
+.searchbooster-btn-ghost {
+  &.searchbooster-btn-primary {
+    @include btn-ghost(
+      $btn-ghost-primary-bg-color,
+      $btn-ghost-primary-border,
+      $btn-ghost-primary-color,
+      $btn-ghost-primary-hover-bg-color,
+      $btn-ghost-primary-hover-color,
+      $btn-ghost-primary-active-bg-color,
+      $btn-ghost-primary-active-border,
+      $btn-ghost-primary-active-color,
+    );
+  }
+
+  &.searchbooster-btn-blue {
+    @include btn-ghost(
+      $btn-ghost-blue-bg-color,
+      $btn-ghost-blue-border,
+      $btn-ghost-blue-color,
+      $btn-ghost-blue-hover-bg-color,
+      $btn-ghost-blue-hover-color,
+      $btn-ghost-blue-active-bg-color,
+      $btn-ghost-blue-active-border,
+      $btn-ghost-blue-active-color,
+    );
+  }
+
+  &.searchbooster-btn-green {
+    @include btn-ghost(
+      $btn-ghost-green-bg-color,
+      $btn-ghost-green-border,
+      $btn-ghost-green-color,
+      $btn-ghost-green-hover-bg-color,
+      $btn-ghost-green-hover-color,
+      $btn-ghost-green-active-bg-color,
+      $btn-ghost-green-active-border,
+      $btn-ghost-green-active-color,
+    );
+  }
+
+  &.searchbooster-btn-yellow {
+    @include btn-ghost(
+      $btn-ghost-yellow-bg-color,
+      $btn-ghost-yellow-border,
+      $btn-ghost-yellow-color,
+      $btn-ghost-yellow-hover-bg-color,
+      $btn-ghost-yellow-hover-color,
+      $btn-ghost-yellow-active-bg-color,
+      $btn-ghost-yellow-active-border,
+      $btn-ghost-yellow-active-color,
+    );
+  }
+
+  &.searchbooster-btn-red {
+    @include btn-ghost(
+      $btn-ghost-red-bg-color,
+      $btn-ghost-red-border,
+      $btn-ghost-red-color,
+      $btn-ghost-red-hover-bg-color,
+      $btn-ghost-red-hover-color,
+      $btn-ghost-red-active-bg-color,
+      $btn-ghost-red-active-border,
+      $btn-ghost-red-active-color,
+    );
+  }
+
+  &.searchbooster-btn-grey {
+    @include btn-ghost(
+      $btn-ghost-grey-bg-color,
+      $btn-ghost-grey-border,
+      $btn-ghost-grey-color,
+      $btn-ghost-grey-hover-bg-color,
+      $btn-ghost-grey-hover-color,
+      $btn-ghost-grey-active-bg-color,
+      $btn-ghost-grey-active-border,
+      $btn-ghost-grey-active-color,
+    );
+  }
+}
+
+.searchbooster-btn-rounded {
+  @include btn-rounded;
+}
+
+.searchbooster-btn-only-icon {
+  padding: 0;
+}

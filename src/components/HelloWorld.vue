@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+// import { SearchBoosterButton }  from 'ui-searchbooster'
 
 defineProps<{ msg: string }>()
 
@@ -11,6 +12,7 @@ const count = ref(0)
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
+    <!-- <SearchBoosterButton @click="count++">count is {{ count }}</SearchBoosterButton> -->
     <p>
       Edit
       <code>components/HelloWorld.vue</code> to test HMR
