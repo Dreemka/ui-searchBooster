@@ -9,7 +9,5 @@ const useSearchBoosterUi = {
   },
 };
 
-export {
-  SearchBoosterButton,
-};
-export default useSearchBoosterUi
+export { SearchBoosterButton };
+export default useSearchBoosterUi;

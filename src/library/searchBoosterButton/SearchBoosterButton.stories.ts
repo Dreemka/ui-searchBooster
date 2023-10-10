@@ -1,9 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from "@storybook/vue3";
 
 import SearchBoosterButton from "./SearchBoosterButton.vue";
 // import selectionIcon from "@/styles/contrust-icon/selection.json";
-
-
 
 // const iconsList = () => {
 //   const result = selectionIcon.icons.map(
@@ -27,12 +25,11 @@ import SearchBoosterButton from "./SearchBoosterButton.vue";
 //   return typesBtn
 // }
 
-
 const meta: Meta<typeof SearchBoosterButton> = {
-  title: 'Actual/Button',
+  title: "Actual/Button",
   component: SearchBoosterButton,
-  //👇 Enables auto-generated documentation for the component story
-  tags: ['autodocs'],
+  // 👇 Enables auto-generated documentation for the component story
+  tags: ["autodocs"],
   argTypes: {
     disabled: {
       description: "Отключает возможность нажатия кнопки",
@@ -66,7 +63,7 @@ const meta: Meta<typeof SearchBoosterButton> = {
     },
     size: {
       // description: "Размер кнопки",
-      description: '`x-small` `small` `medium` `large` `x-large`',
+      description: "`x-small` `small` `medium` `large` `x-large`",
       table: {
         defaultValue: { summary: "medium" },
       },
@@ -76,7 +73,7 @@ const meta: Meta<typeof SearchBoosterButton> = {
       },
     },
     color: {
-      description: `Опция для передачи цвета`,
+      description: "Опция для передачи цвета",
       table: {
         defaultValue: { summary: "primary" },
       },
@@ -124,14 +121,14 @@ type Story = StoryObj<typeof SearchBoosterButton>;
 
 export const Contained: Story = {
   args: {
-    variant: 'contained',
-    title: 'Button',
+    variant: "contained",
+    title: "Button",
   },
 };
 
 export const Outlined: Story = {
   args: {
     ...Contained.args,
-    variant: 'outlined',
+    variant: "outlined",
   },
 };

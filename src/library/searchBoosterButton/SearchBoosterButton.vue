@@ -29,13 +29,7 @@
 import { computed, PropType } from "vue";
 // import ContrustIcon from "../contrustIcon/ContrustIcon.vue";
 import { IBtnProps } from "./types";
-type BtnColorType =
-  | "primary"
-  | "blue"
-  | "green"
-  | "yellow"
-  | "red"
-  | "grey";
+type BtnColorType = "primary" | "blue" | "green" | "yellow" | "red" | "grey";
 // interface IBtnProps {
 //   title?: string;
 //   prependIcon?: string;

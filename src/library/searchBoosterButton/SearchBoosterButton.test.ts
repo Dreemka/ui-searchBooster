@@ -1,15 +1,15 @@
 // src/sum.test.ts
-import { expect, describe, it } from 'vitest';
+import { expect, describe, it } from "vitest";
 import { mount } from "@vue/test-utils";
-import SearchBoosterButton from './SearchBoosterButton.vue';
+import SearchBoosterButton from "./SearchBoosterButton.vue";
 
-describe('SearchBoosterButton', () => {
+describe("SearchBoosterButton", () => {
   const wrapper = mount(SearchBoosterButton);
-  it('Snapshot', async () => {
+  it("Snapshot", async () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
-  it('renders button props title correctly', async () => {
-    const buttontitle = 'Кнопка';
+  it("renders button props title correctly", async () => {
+    const buttontitle = "Кнопка";
     const title = mount(SearchBoosterButton, {
       props: {
         title: buttontitle,
@@ -18,8 +18,8 @@ describe('SearchBoosterButton', () => {
     expect(title.text()).toContain(buttontitle);
   });
 
-  it('emits buttonClick event when button is clicked', async () => {
-    await wrapper.find('button').trigger('click');
-    expect(wrapper.emitted('buttonClick')).toBeTruthy();
+  it("emits buttonClick event when button is clicked", async () => {
+    await wrapper.find("button").trigger("click");
+    expect(wrapper.emitted("buttonClick")).toBeTruthy();
   });
 });
