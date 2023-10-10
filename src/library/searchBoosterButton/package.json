@@ -1,0 +1,9 @@
+{
+  "name": "ui-SearchBooster/search-booster-button",
+  "private": true,
+  "main": "../dist/secondary-package-name/index.js",
+  "types": "./searchBoosterButton.d.ts",
+  "browser": {
+      "./sfc": "./SearchBoosterButton.vue"
+  }
+}

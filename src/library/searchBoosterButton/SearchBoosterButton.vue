@@ -29,6 +29,25 @@
 import { computed, PropType } from "vue";
 // import ContrustIcon from "../contrustIcon/ContrustIcon.vue";
 import { IBtnProps } from "./types";
+type BtnColorType =
+  | "primary"
+  | "blue"
+  | "green"
+  | "yellow"
+  | "red"
+  | "grey";
+// interface IBtnProps {
+//   title?: string;
+//   prependIcon?: string;
+//   appendIcon?: string;
+//   disabled?: boolean;
+//   color?: BtnColorType;
+//   variant?: string;
+//   size?: string;
+//   rounded?: boolean;
+//   icon?: string;
+//   titleHTML?: string;
+// }
 
 const props = defineProps({
   title: String as PropType<IBtnProps["title"]>,
@@ -36,7 +55,7 @@ const props = defineProps({
   appendIcon: String as PropType<IBtnProps["appendIcon"]>,
   disabled: Boolean,
   color: {
-    type: String as PropType<IBtnProps["color"]>,
+    type: String as () => BtnColorType,
     default: "primary",
   },
   variant: {

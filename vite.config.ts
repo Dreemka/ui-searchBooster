@@ -9,9 +9,14 @@ import pkg from './package.json' assert { type: 'json' }
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue() , dts()],
+  plugins: [vue() , dts({
+    insertTypesEntry: true,
+  })],
   test: {
     // ...
+  },
+  server: {
+    port: 5319,
   },
   resolve: {
     alias: {

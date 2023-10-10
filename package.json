@@ -3,7 +3,7 @@
   "files": [
     "dist"
   ],
-  "version": "0.0.6",
+  "version": "0.0.14",
   "main": "./dist/ui-searchbooster.umd.js",
   "module": "./dist/ui-searchbooster.es.js",
   "exports": {
@@ -12,11 +12,11 @@
       "require": "./dist/ui-searchbooster.umd.js"
     }
   },
-  "types": "./dist/library/index.d.ts",
+  "types": "./dist/types/library/index.d.ts",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6007",
     "build-storybook": "storybook build",
@@ -26,6 +26,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@ntc-etalon/ui-contrust": "^0.1.123",
     "@storybook/addon-actions": "^7.4.6",
     "@storybook/addon-essentials": "^7.4.6",
     "@storybook/addon-interactions": "^7.4.6",
@@ -34,6 +35,7 @@
     "@storybook/testing-library": "^0.2.2",
     "@storybook/vue3": "^7.4.6",
     "@storybook/vue3-vite": "^7.4.6",
+    "@types/node": "^20.8.4",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/test-utils": "^2.4.1",
     "eslint-plugin-storybook": "^0.6.15",
@@ -41,7 +43,7 @@
     "sass": "^1.69.0",
     "storybook": "^7.4.6",
     "typescript": "^5.0.2",
-    "ui-searchbooster": "^0.0.5",
+    "ui-searchbooster": "^0.0.14",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.6.0",
     "vitest": "^0.34.6",

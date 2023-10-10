@@ -11,5 +11,5 @@ const useSearchBoosterUi = {
 
 export {
   SearchBoosterButton,
-  useSearchBoosterUi,
 };
+export default useSearchBoosterUi

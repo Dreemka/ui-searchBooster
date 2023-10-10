@@ -1,24 +1,32 @@
 {
+  "files": [],
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
-
+    "outDir": "./dist/types",
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution":"node", // отвечает за распознование типов в импортируемых переменных
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "declaration": true,
     "jsx": "preserve",
-
+    "types": [
+      "vite/client"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@": ["src"],
+      "~/*": ["./*"],
+    },
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noUnusedLocals": true, // Помечает ошибкой не используемые переменные
+    "noUnusedParameters": true, // Помечает ошибкой не используемые аргументы в функции
+    "noFallthroughCasesInSwitch": true, // Помечает ошибкой пусой регистр в switch case
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]
